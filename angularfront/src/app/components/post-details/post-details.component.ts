@@ -59,8 +59,7 @@ export class PostDetailsComponent implements OnInit {
     }
 
 
-    updatePublished(): void {
-
+    updatePublished(status): void {
       const data = {
         title: this.currentPost.title,
         description: this.currentPost.description,
