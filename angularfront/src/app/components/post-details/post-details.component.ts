@@ -46,6 +46,18 @@ export class PostDetailsComponent implements OnInit {
         });
     }
 
+    deletePost(): void {
+      this.postService.delete(this.currentPost.id)
+      .subscribe(
+        response => {
+          console.log(response);
+          this.router.navigate(['/posts']);
+        },
+        error => {
+          console.log(error);
+        });
+    }
+
   
 
 
