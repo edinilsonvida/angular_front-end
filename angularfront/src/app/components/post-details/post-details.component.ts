@@ -58,6 +58,24 @@ export class PostDetailsComponent implements OnInit {
         });
     }
 
+
+    updatePublished(): void {
+
+      const data = {
+        title: this.currentPost.title,
+        description: this.currentPost.description,
+        published: status
+      };
+
+      this.postService.update(this.currentPost.id, data)
+      .subscribe(
+        response => {
+          console.log(response);
+        },
+        error => {
+          console.log(error);
+        });
+    }
   
 
 
