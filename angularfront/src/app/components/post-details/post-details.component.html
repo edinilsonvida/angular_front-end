@@ -18,8 +18,10 @@
                 {{ currentPost.published ? "Publicada" : "Pendente"}}
             </div>
 
-            <button *ngIf="!currentPost.published" class="btn btn-primary" (click)="updatePublished(true)">Publicar</button>
-            <button *ngIf="currentPost.published" class="btn btn-primary" (click)="updatePublished(false)">Despublicar</button>
+            <button *ngIf="!currentPost.published" class="btn btn-primary"
+                (click)="updatePublished(true)">Publicar</button>
+            <button *ngIf="currentPost.published" class="btn btn-primary"
+                (click)="updatePublished(false)">Despublicar</button>
 
             <button class="btn btn-danger" (click)="deletePost()">Excluir</button>
             <button class="btn btn-warning" (click)="updatePost()">Atualizar</button>
